@@ -1,0 +1,489 @@
+/* =============================
+   Base + Reset Styles
+   ============================= */
+/* Base box-sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Body styles */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+header {
+  background-color: #fff3e4;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.main-nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  text-decoration: none;
+  color: #2F5C42;
+  transition: color 0.2s ease;
+}
+.main-nav a:hover {
+  color: #C26A3E;
+}
+.main-nav i {
+  margin-right: 0.5rem;
+  color: #2F5C42;
+  display: none;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #2F5C42;
+  cursor: pointer;
+}
+.responsive-nav {
+  position: relative;
+}
+header img {
+  max-height: 30px;
+  width: auto;
+  height: auto;
+}
+/* Footer styles */
+  footer {
+    background-color: #333333; /* Charcoal Slate */
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+  }
+/* Link styles */
+  a {
+    color: #C26A3E; /* Rust Orange */
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+a:hover,
+  a:focus {
+    color: #DDE6DD; /* Eucalyptus Grey */
+  }
+.about-hero {
+  background-image: url('../images/about-banner.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 10rem 2rem;
+  position: relative;
+  overflow: hidden; /* important for the overlay */
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  background-color: rgba(0, 0, 0, 0.45); /* adjust darkness here */
+  z-index: 0;
+}
+.about-hero * {
+  position: relative;
+  z-index: 1;
+}
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.about-hero h1,
+.about-hero h2,
+.about-hero h3,
+.about-hero h4 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.hero h1,
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero a {
+  background-color: #2F5C42;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.hero a:hover {
+  background-color: #254733;
+}
+/* Footer styles */
+  footer {
+    background-color: #333333; /* Charcoal Slate */
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+  }
+/* Link styles */
+  a {
+    color: #C26A3E; /* Rust Orange */
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+a:hover,
+  a:focus {
+    color: #DDE6DD; /* Eucalyptus Grey */
+  }
+.about-story {
+  background-color: #fff3e4;
+  padding: 3rem 2rem;
+  }
+.about-story-inner {
+    background-color: #fff7ed;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+.about-story-inner h2 {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2F5C42;
+  }
+.about-story p {
+    margin-bottom: 0.5em; /* or try 0.25em for even less space */
+  }
+.project a {
+    color: #C26A3E;
+    font-weight: bold;
+    text-decoration: none;
+  }
+.project a:hover {
+    text-decoration: underline;
+  }
+.about-intro,
+.about-values,
+.about-cta {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #333;
+}
+.about-values {
+  padding-bottom: 1rem;
+}
+.about-cta {
+  padding-top: 1rem;
+}
+.about-intro h1,
+.about-story h2,
+.about-values h2 {
+  font-family: 'Libre Baskerville', serif;
+  color: #2F5C42;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+.values-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.values-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #C26A3E;
+}
+.about-cta {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.about-cta .btn {
+  background-color: #C26A3E;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+.about-cta .btn:hover {
+  background-color: #A3522D;
+}
+.about-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    
+  
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      z-index: 1000;
+      background-color: #fff3e4;
+      padding: 1rem;
+      flex-direction: column;
+      width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      gap: 1rem; /* or whatever you prefer */
+    }
+.main-nav.show {
+      display: flex;
+    }
+.main-nav i {
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: #2F5C42;
+    }
+header {
+      padding: 0.75rem 1rem;
+    }
+.header-inner {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+.about-hero p {
+      font-size: 1rem;
+    }
+.about-intro {
+      padding: 6rem 1rem;
+    }
+.about-intro h1 {
+      font-size: 2rem;
+    }
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+    }
+}
+  
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #fff3e4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.testimonials h2 {
+  color: #2F5C42;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.testimonial-carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial {
+  display: none;
+  font-style: italic;
+  color: #333;
+}
+.testimonial.active {
+  display: block;
+}
+.testimonial strong {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #C26A3E;
+}
+/* =============================
+   Layout + Global Structure
+   ============================= */
+
+
+/* =============================
+   Reusable Typography
+   ============================= */
+.services h2 {
+    color: #2F5C42;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+.service h3 {
+    color: #C26A3E;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+.portfolio-preview h2 {
+    color: #2F5C42;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+.project h3 {
+    color: #C26A3E;
+    margin-bottom: 0.5rem;
+  }
+.hero h1 {
+      font-size: 2rem;
+    }
+/* =============================
+   Hero Section
+   ============================= */
+.hero {
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 10rem 2rem;
+  position: relative;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero {
+      padding: 6rem 1rem;
+    }
+.hero p {
+      font-size: 1rem;
+    }
+/* =============================
+   About Page Sections
+   ============================= */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;         /* <- makes it round */
+    object-fit: cover;
+    margin: 1rem auto 2rem;
+    display: block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* Tighten space between image and paragraph */
+  }
+/* =============================
+   Services Section
+   ============================= */
+
+/* ---------- hero ---------- */
+.services-hero{
+  background:#fff3e4;            /* same cream as existing .services */ /*&#8203;:contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}*/
+  text-align:center;
+  padding:4rem 1rem;
+}
+.services-hero h1{font-size:2.5rem;font-family:'Libre Baskerville',serif;}
+
+/* ---------- timeline ---------- */
+.workflow{max-width:500px;margin-left:auto;margin-right:auto;padding:3rem 1rem;}
+.workflow-selector{display:flex;gap:.5rem;justify-content:center;margin-bottom:2rem;}
+.wf-btn{
+  background:#fff3e4;border:1px solid #2F5C42;padding:.5rem 1rem;
+  font-family:'Inter',sans-serif;font-weight:600;color:#2F5C42;border-radius:4px;cursor:pointer;
+}
+.wf-btn.active{background:#2F5C42;color:#fff;}
+.timeline{display:none;border-left:4px solid #2F5C42;list-style:none;padding-left:3rem;}
+.timeline.active{display:block;}
+.timeline li{position:relative;margin-bottom:2rem;}
+/* .timeline li::before{ */
+/*   content:"✔";position:absolute;left:-1.1rem;top:.15rem;color:#C26A3E; */
+/* } */
+
+/* ---------- packages tweaks ---------- */
+.packages .service{max-width:360px;}          /* wider card */
+.packages .service h3{color:#C26A3E;}         /* heading in rust */
+
+/* ---------- faq accordion ---------- */
+.faq{max-width:720px;margin:0 auto 4rem;padding:0 1rem;}
+.faq details{margin-bottom:1rem;background:#f7f3eb;padding:1rem;border-radius:6px;}
+.faq summary{font-weight:600;cursor:pointer;}
+
+.services {
+    padding: 4rem 2rem;
+    background-color: #fff3e4;
+    text-align: center;
+  }
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+.service img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+.service {
+  flex: 1 1 300px;     /* Allows it to grow/shrink */
+  max-width: 320px;    /* Limits how wide each card can grow */
+  background-color: #f7f3eb;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  }
+.service p {
+    font-size: 1rem;
+    color: #333333;
+  }
+
+
+/* =============================
+   Portfolio Section
+   ============================= */
+.portfolio-preview {
+    padding: 4rem 2rem;
+    background-color: #F7F3EB;
+    text-align: center;
+  }
+.project {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+.project p {
+    color: #333333;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
