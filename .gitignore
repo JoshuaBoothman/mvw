@@ -1,0 +1,11 @@
+   # Windows thumbnail cache files
+   Thumbs.db
+   ehthumbs.db
+   Desktop.ini
+
+   # Ignore the entire assets folder and its contents
+   /assets/
+
+   # If you have other OS-specific files or build outputs, add them here
+   # e.g., for macOS:
+   # .DS_Store
